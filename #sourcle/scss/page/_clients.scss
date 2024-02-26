@@ -1,0 +1,22 @@
+.clients{
+    margin: 50px auto;
+    padding: 15px 30px;
+    @include flex(column, center, center);
+    .clients_header{
+        width: 100%;
+        margin: 20px 5px;
+        h1{@include font(40px, 'Arial', 500, none, $dark); text-align: center; margin: 10px;}
+        p{@include font(18px, 'Arial', 400, none, grey); text-align: center; margin: 10px;}
+    }
+    .clients_media{
+        @include flex(row, center, space-between);
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 10px;
+        padding: 5px 20px;
+        .clients_media_content{
+            margin :10px;
+            img{width: 40px;height: auto;}
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.header{
+    @include position(absolute, 0, 0, 100%, 100%, 100);
+    .header_container{
+        @include flex(row, center, space-between);
+        .header_logo{
+            @include flex(row, center, center);
+            a{
+                @include font(24px, ('Arial', Tahoma, Geneva, Verdana, sans-serif), 600, none, black);
+                margin: 5px;
+            }
+            img{
+                width: 24px;
+                height: 18px;
+                background-color: $light;
+                margin: 5px;
+            }
+        }
+        .header_menu{
+            margin: 10px;
+            @include flex(row, center, space-between);
+            .header_menu_item{
+                margin: 0px 15px;
+                a{
+                    @include font(16px, ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif), 400, none, black);
+                    transition: all 0.5s ease 0s;
+                    &:hover{
+                        transition: all 0.5s ease 0s;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .register{
+                margin :10px;
+                width: 150px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                background-color: none;
+                background-color: #4CAF4F;
+                cursor: pointer;
+                @include flex(row, center, center);
+                p{
+                    @include font(16px, ('Segoe UI', Tahoma, Geneva, Verdana, sans-serif), 400, none, $light);
+                    margin: 2px;
+                }
+                .left_array{
+                    margin: 3px 0px 0px 0px;
+                }
+            }
+            @media(max-width: 767px){
+                @include position(fixed, 0, -120%, 110%, 100%, 50);
+                transition: all 0.5s ease 0s;
+                @include flex(column, center, center);
+                .header_menu_item{
+                    margin: 15px 10px;
+                }
+                &.active{
+                    z-index: 50;
+                    left: -3%;
+                    transition: all 0.5s ease 0s;
+                }
+            }
+        }
+    }
+}

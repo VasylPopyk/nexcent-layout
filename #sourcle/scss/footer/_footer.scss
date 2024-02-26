@@ -1,0 +1,75 @@
+.footer{
+    background-color: #263238;
+    padding: 20px 5px;
+    width: 100%;
+    .footer_container{
+        @include flex(row, center, space-between);
+        .footer_content{
+            @include flex(column, flex-start, flex-start);
+            .footer_logo{
+                @include flex(row, center, center);
+                margin: 10px 0px;
+                img{width: 25px;height: 25px;margin: 2px;}
+                h2{@include font(26px, ('Arial', Tahoma, Geneva, Verdana, sans-serif), 600, none, white); margin: 2px;}
+            }
+            .footer_content_text{@include font(14px, ('Arial', Tahoma, Geneva, Verdana, sans-serif), 300, none, lightgrey); margin: 10px 0; line-height: 24px}
+            .footer_social{
+                @include flex(row, center, center);
+                .footer_social_item{
+                    margin: 2px;
+                    img{width: 30px;height: 30px;}
+                }
+            }
+        }
+        .footer_menu{
+            @include flex(row, flex-start, center);
+            margin: 10px 5px;
+            .footer_menu_item{
+                margin: 20px 30px;
+                h1{@include font(22px, ('Arial', Tahoma, Geneva, Verdana, sans-serif), 400, none, white); margin: 20px 0;}
+                .footer_menu_item_link{
+                    margin: 10px 2px;
+                    a{@include font(18px, ('Arial', Tahoma, Geneva, Verdana, sans-serif), 400, none, lightgrey);}
+                }
+                .footer_feedback{
+                    @include flex(row, center, center);
+                    width: 220px;
+                    height: 35px;
+                    border-radius: 5px;
+                    background-color: darkslategray;
+                    overflow: hidden;
+                    input{
+                        border: none;
+                        background-color: none;
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        background-color: darkslategray;
+                        @include font(14px, ('Arial', Tahoma, Geneva, Verdana, sans-serif), 400, none, lightgrey);
+                        padding: 3px;
+                    }
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        cursor: pointer;
+                        img{
+                            width: 15px;
+                            height: 15px;
+                            margin: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        @media(max-width: 990px){
+            @include flex(column, center, center);
+            flex-wrap: wrap-reverse;
+            .footer_menu{
+                flex-wrap: wrap;
+            }
+        }
+    }
+    @media(max-width: 400px){
+        min-width: 99vw;
+    }
+}

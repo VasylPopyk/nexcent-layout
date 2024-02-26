@@ -1,0 +1,207 @@
+.info{
+    margin: 20px auto;
+    @include flex(column, flex-start, flex-start);
+    .info_experience{
+        width: 100%;
+        margin: 20px 0px;
+        @include flex(row, center, center);
+        .info_experience_content{
+            img{
+                width: 300px;
+                height: auto;
+            }
+        }
+        .info_experience_text{
+            @include flex(column, flex-start, flex-start);
+            max-width: 600px;
+            h1{@include font(32px, 'Arial', 500, none, $dark);  margin: 10px; line-height: 42px;}
+            p{@include font(16px, 'Arial', 400, none, grey); margin: 10px; line-height: 26px;}
+            button{
+                height: 50px;
+            }
+        }
+        @media(max-width: 1050px){
+            flex-wrap: wrap-reverse;
+        }
+    }
+    .info_helping{
+        width :100%;
+        margin: 20px 0px;
+        @include flex(row, center, center);
+        .info_helping_text{
+            margin: 10px;
+            h1{
+                @include font(32px, 'Arial', 500, none, $dark); 
+                margin: 10px;
+                span{color: $green;}
+                line-height: 42px;
+            }
+            p{@include font(16px, 'Arial', 400, none, grey); margin: 15px 10px;}
+        }
+        .info_helping_content{
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 10px;
+            .info_helping_content_item{
+                width: 300px;
+                @include flex(row, center, flex-start);
+                img{
+                    width: 35px;
+                    height: auto;
+                    margin: 10px;
+                }
+                .info_helping_content_item_text{
+                    margin: 10px;
+                    @include flex(column, flex-start, flex-start);
+                    h3{@include font(26px, 'Arial', 400, none, $dark);}
+                    p{@include font(16px, 'Arial', 400, none, grey);}
+                }
+            }
+            @media(max-width: 990px){
+                width: auto;
+                .info_helping_content_item{
+                    max-width: 300px;
+                }
+            }
+        }
+        @media(max-width: 990px){
+            flex-wrap: wrap;
+        }
+    }
+    .info_design{
+        width: 100%;
+        margin: 20px 0;
+        @include flex(row, center, center);
+        .info_design_content{
+            img{
+                width: 300px;
+                height: auto;
+            }
+        }
+        .info_design_text{
+            @include flex(column, flex-start, flex-start);
+            max-width: 600px;
+            h1{@include font(32px, 'Arial', 500, none, $dark);  margin: 10px;}
+            p{@include font(16px, 'Arial', 400, none, grey); margin: 10px; line-height: 26px;}
+            button{
+                height: 50px;
+            }
+        }
+        @media(max-width: 1050px){
+            flex-wrap: wrap-reverse;
+        }
+    }
+    .info_companies{
+        width: 100%;
+        margin: 20px 0;
+        @include flex(row, center, center);
+        .info_companies_media{
+            margin: 20px;
+            img{
+                width: 230px;
+                height: 230px;
+                border-radius: 5px;
+            }
+        }
+        .info_companies_content{
+            @include flex(column, flex-start, flex-start);
+            max-width: 520px;
+            .info_companies_content_text{
+                p{@include font(16px, 'Arial', 400, none, grey); margin: 10px 0px; line-height: 26px;}
+            }
+            .info_companies_content_creator{
+                @include flex(column, flex-start, flex-start);
+                h3{@include font(18px, 'Arial', 700, none, $green); margin: 5px 0px;}
+                p{@include font(16px, 'Arial', 400, none, grey); margin: 5px 0px;}
+            }
+            .info_companies_content_customers{
+                @include flex(row, center, space-between);
+                width: 100%;
+                flex-wrap: wrap;
+                .info_companies_content_customers_item{
+                    width: 28px;
+                    height: 28px;
+                    margin: 3px;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .register{
+                    background-color: white;
+                    width: 200px;
+                    p{@include font(18px, 'Arial', 700, none, $green);}
+                    .left_array{
+                        margin: 3px;
+                        span{background-color: $green;}
+                    }
+                }
+            }
+        }
+        @media(max-width: 720px){
+            flex-wrap: wrap;
+            .info_companies_content_customers{
+                flex-wrap: wrap;
+            }
+        }
+    }
+    .info_caring{
+        @include flex(column, center, center);
+        width: 100%;
+        margin: 20px 0;
+        .info_caring_header{
+            max-width: 740px;
+            @include flex(column, center, center);
+            h1{@include font(32px, 'Arial', 500, none, $dark);  margin: 10px;}
+            p{@include font(16px, 'Arial', 400, none, grey); margin: 10px; text-align: center; line-height: 26px;}
+        }
+        .info_caring_content{
+            @include flex(row, center, center);
+            width: 100%;
+            .info_caring_item{
+                position: relative;
+                width: 260px;
+                margin: 5px;
+                .info_caring_item_background{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 260px;
+                    height: auto;
+                    z-index: 1;
+                }
+                .info_caring_item_text{
+                    position: absolute;
+                    top: 120px;
+                    left: 20px;
+                    width: 220px;
+                    z-index: 2;
+                    background-color: white;
+                    padding: 3px;
+                    border-radius: 5px;
+                    @include flex(column, center, center);
+                    p{@include font(16px, 'Arial', 600, none, grey); margin: 10px; text-align: center; line-height: 26px;}
+                    .register{
+                        background-color: white;
+                        width: 200px;
+                        p{@include font(18px, 'Arial', 700, none, $green);}
+                        .left_array{
+                            margin: 3px;
+                            span{background-color: $green;}
+                        }
+                    }
+                }
+            }
+            @media(max-width: 990px){
+                flex-wrap: wrap;
+                .info_caring_item{
+                    margin: 10px 10px 300px 10px;
+                }
+            }
+        }
+        @media(max-width: 767px){
+            .info_caring_header{width: 100%;}
+        }
+    }
+}

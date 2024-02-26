@@ -1,0 +1,21 @@
+@import "config/mixins";
+@import "config/null";
+@import "config/templates";
+@import "config/variables";
+.wrapper{
+ @import "header/header";
+ .page{
+    margin-top: 50px;
+    @import "page/banner";
+    @import "page/clients";
+    @import "page/manage";
+    @import "page/info";
+    @import "page/end";
+    @media(max-width: 500px){
+      margin: 50px auto;
+      max-width: 99vw;
+      margin-left: 5px;
+    }
+ }   
+ @import "footer/footer";
+}

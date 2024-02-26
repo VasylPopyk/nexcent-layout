@@ -1,0 +1,29 @@
+.banner{
+    margin: 20px auto;
+    padding: 80px 50px;
+    @include flex(row, center, space-between);
+    .banner_text{
+        margin: 20px 0;
+        @include flex(column, flex-start, flex-start);
+        h1{
+            @include font(72px, 'Arial', 500, none, $dark);
+            line-height: 90px;
+            span{color: $green}
+            margin: 10px 0px;
+        }
+        p{@include font(18px, 'Arial', 400, none, grey); margin: 10px 0px;}
+        .register{height: 50px; margin: 20px 0;}
+    }
+    .banner_media{
+        margin: 20px;
+        img{
+            width: 280px;
+            height: auto;
+        }
+    }
+    @media(max-width: 990px){
+        flex-wrap: wrap;
+        padding: 5px;
+        margin: 0px auto;
+    }
+}

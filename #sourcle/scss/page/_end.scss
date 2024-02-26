@@ -1,0 +1,22 @@
+.end{
+    width: 100%;
+    margin: 50px 5px;
+    @include flex(column, center, center);
+    .end_content{
+        @include flex(column, center, center);
+        max-width: 530px;
+        h1{
+            @include font(50px, 'Arial', 600, none, $dark);
+            text-align: center;
+        }
+    }
+    @media(max-width: 990px){
+        width: auto;
+        .end_content{
+            width :auto;
+            h1{
+                font-size: 36px;
+            }
+        }
+    }
+}
